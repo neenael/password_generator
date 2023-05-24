@@ -6,7 +6,7 @@ class PasswordForm(forms.ModelForm):
 
     MODE_CHOICES = (
         ('common_password', 'Символьный пароль'),
-        ('XKCD_password', 'Словестный пароль')
+        ('XKCD_password', 'Словесный пароль')
     )
     mode = forms.ChoiceField(
         choices=MODE_CHOICES,
