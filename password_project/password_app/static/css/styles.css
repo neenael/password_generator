@@ -1,0 +1,568 @@
+* {
+  box-sizing: border-box;
+}
+html body {
+  font-family: "Open Sans", sans-serif;
+  color: #555;
+}
+.password_input{
+color: red;
+ appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+p {
+  margin: 0;
+}
+.main_section {
+  display: flex;
+  align-items: center;
+  padding: 300px 0;
+}
+
+.main__container {
+  max-width: 1300px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 50px;
+  background: #ffffff;
+  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+  border-radius: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 50px;
+}
+.main__title {
+  text-align: center;
+  margin: 0;
+  font-size: 62px;
+  line-height: 120%;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #23c483;
+}
+.password_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.input_block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+.password_input {
+  font-size: 32px;
+  line-height: 120%;
+  width: 100%;
+  padding: 20px 40px;
+  background-color: transparent;
+  border: 0;
+  color: #cacaca;
+  border: 5px solid rgba(35, 196, 131, .5);
+  background-color: transparent;
+  border-radius: 15px;
+  cursor: pointer;
+  color: #9e9ea7;
+}
+.password_input::placeholder {
+    color: #9e9ea7;
+}
+
+.passwoed_label {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.passwoed_label {
+  margin-bottom: 30px;
+}
+
+.input_tip {
+  margin-bottom: 15px;
+
+  color: #777;
+  font-size: 24px;
+}
+
+/* .password_input:not(:last-child){
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.password_input:last-child{
+    margin-bottom: 50px;
+    outline: 6px solid red;
+} */
+#complexity_input {
+  transition: transform 0.3s ease-in-out;
+}
+#complexity_label.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.password_result {
+  background-color: #fff;
+  padding: 20px 20px;
+  border-radius: 30px;
+  width: 100%;
+  font-size: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 5px solid #eee;
+  margin-top: 50px;
+
+}
+
+.password_span {
+    background-color: #23c483;
+  color: #fff;
+  display: block;
+  padding: 15px 25px;
+  border-radius: 20px;
+}
+.copy_password {
+  border: 2px solid #23c483;
+  /* background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%); */
+  border-radius: 15px;
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.password_submit {
+  padding: 30px 50px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  margin-top: 30px;
+}
+
+.password_submit:hover {
+  background-color: #23c483;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.password_submit:active {
+  transform: translateY(-1px);
+}
+.password_result__btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.password_result__btn{
+    max-width: 50%;
+
+}
+.password_span{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.copy_icon {
+  color: #23c483;
+}
+.copy_password.copied .copy_icon {
+  opacity: 0;
+}
+.copy_password.copied {
+  background-image: none;
+  background-color: #23c483;
+  color: #d4fc79;
+}
+
+* {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --hue: 223;
+  --bg1: hsl(var(--hue), 10%, 90%);
+  --bg2: hsl(var(--hue), 10%, 80%);
+  --fg1: hsl(var(--hue), 10%, 10%);
+  --fg2: hsl(var(--hue), 10%, 20%);
+  --primary1: hsl(var(--hue), 90%, 55%);
+  --primary2: hsl(var(--hue), 90%, 45%);
+  font-size: calc(20px + (40 - 20) * (100vw - 320px) / (1280 - 320));
+}
+
+
+/* Main button styles */
+.test {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  transition: width 0.3s ease-in-out;
+}
+.copy_icon {
+  width: 50px;
+  height: 50px;
+}
+.test:not(:disabled):active {
+  transform: translateY(0.1em);
+}
+.btn__text {
+  background-color: var(--primary1);
+  border-radius: inherit;
+  color: hsl(0, 0%, 100%);
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  transition: background-color 0.15s linear, color 0.15s 0.3s ease-in-out;
+  width: 100%;
+}
+.test:not(:disabled):focus .btn__text,
+.test:not(:disabled):hover .btn__text {
+  background-color: var(--primary2);
+}
+.btn__progress {
+  overflow: visible;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+.btn__progress-track {
+  r: 12px;
+  stroke: var(--bg2);
+  stroke-width: 24;
+}
+.btn__progress-fill {
+  stroke: var(--primary1);
+  stroke-dashoffset: 125.66;
+}
+.btn__progress-check {
+  stroke: hsl(0, 0%, 100%);
+  stroke-dashoffset: 34;
+}
+
+/* Both states */
+.btn--running,
+.btn--done {
+  outline: none;
+  pointer-events: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+.btn--running .btn__text,
+.btn--done .btn__text {
+  color: transparent;
+  transition: background-color 0.3s ease-in-out, visibility 0.3s steps(1);
+}
+.btn--running .btn__progress,
+.btn--done .btn__progress {
+  visibility: visible;
+}
+
+/* Running state */
+.btn--running .btn__text {
+  background-color: var(--bg2);
+  visibility: hidden;
+}
+.btn--running .btn__progress {
+  transition: visibility 0.3s 0.3s steps(1, start);
+}
+.btn--running .btn__progress-track {
+  r: 20px;
+  stroke-width: 8;
+  transition: r 0.3s 0.3s ease-in-out, stroke-width 0.3s 0.3s ease-in-out;
+}
+.btn--running .btn__progress-fill {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 2s 0.6s linear;
+}
+
+/* Done state */
+.btn--done .btn__progress-track {
+  stroke: transparent;
+  transition: r 0.3s ease-in-out, stroke-width 0.3s ease-in-out;
+}
+.btn--done .btn__progress-check {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.3s 0.3s ease-out;
+}
+
+@media (max-width: 1500px) {
+  .main_section {
+    padding: 100px 0;
+  }
+  .main__container {
+    width: 100%;
+    max-width: 800px;
+    padding: 30px 30px;
+    border-radius: 50px;
+  }
+  .passwoed_label {
+    width: 70%;
+  }
+  .password_result {
+    margin-top: 40px;
+  }
+  .main__title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  .password_input{
+    font-size: 18px;
+    padding: 10px 20px;
+    border-width: 3px;
+  }
+  .input_tip{
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .password_submit{
+    font-size: 18px;
+    padding: 20px 40px;
+    margin-top: 10px;
+  }
+
+  .password_result{
+    border-width: 3px;
+    padding: 20px 30px;
+    font-size: 24px;
+  }
+  .copy_password{
+padding: 4px;
+border-radius: 10px;
+  }
+  .password_span{
+    padding: 10px 10px;
+    border-radius: 10px;
+  }
+  .copy_icon{
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 1500px){
+    .main__container{
+        max-width: 550px;
+    }
+    .main__title{
+        font-size: 24px;
+    }
+
+    .password_settings{
+        font-size: 14px;
+        margin-top: 30px;
+    }
+    .password_settings__item:not(:last-child){
+        margin-bottom: 5px;
+    }
+
+    .password_result{
+        font-size: 16px;
+        margin-top: 30px;
+    }
+    
+}
+
+@media (max-width: 768px){
+    .main__container{
+        max-width: 340px;
+    }
+    .password_result{
+        flex-direction: column;
+    align-items: flex-start;
+    }
+    .password_result__btn{
+        max-width: 100%;
+    }
+    .password_result>*:not(:last-child){
+        margin-bottom: 10px;
+    }
+    .password_span{
+        padding: 15px 10px;
+
+    }
+    .copy_password{
+        width: 100%;
+    }
+    .passwoed_label{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .password_input{
+        font-size: 14px;
+    }
+    .password_result__btn{
+        width: 100%;
+    }
+}
+
+
+.password_input {
+    width: 100%;
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 15px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    transition: .3s ease;
+   }
+   
+   .password_input::placeholder {
+    color: #9e9ea7;
+   }
+   
+   .password_input:focus, .password_input:hover {
+    outline: none;
+    border-color: rgba(35, 196, 131, .4);
+    background-color: #fff;
+    box-shadow:  0 0 0 4px rgb(35 196 131 / 10%);
+   }
+   
+   
+   
+
+
+
+
+   /*  */
+
+
+   *{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.choices .choices__list.choices__list--dropdown .choices__placeholder {
+    display: none; 
+  }
+
+  .header_choices.choices[data-type*=select-one]:after {
+    width: 44px;
+    height: 44px;
+    top: 0;
+    right: 0;
+    border: 0;
+    background-image: url("arrow.svg");
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 0;
+    transition: transform .1s ease-in-out;
+    z-index: 5;
+
+
+
+
+
+  }
+
+  .choices[data-type*=select-one]{
+    width: 100%;
+  }
+
+  .header_choices.choices[data-type*=select-one].is-open:after {
+    margin-top: 0;
+  }
+
+  .header_choices .choices__inner {
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    padding-left: 15px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #9e9ea7;
+    transition: .3s ease;
+  }
+  .header_choices {
+    max-width: 400px;
+  }
+  .header_choices .choices__list--dropdown {
+    border-color: rgba(35, 196, 131, .4);
+    border-width: 2px;
+    top: calc(100% + 12px);
+    padding-top: 20px;
+    z-index: 10;
+    border-radius: 8px;
+  }
+  .header_choices .choices__inner {
+    position: relative;
+    z-index: 2;
+    border-radius: 8px;
+  }
+  .header_choices.is-open .choices__inner {
+    border-radius: 8px;
+  }
+  .choices__list--single{
+    color: #9e9ea7;
+    opacity: 1;
+  }
+  .choices__list--dropdown{
+    border-color: rgba(35, 196, 131, .4);
+    background-color: #fff;
+    box-shadow:  0 0 0 4px rgb(35 196 131 / 10%);
+    margin-top: 0;
+    color: #9e9ea7;
+  }
+  .header_choices .choices__list--dropdown{
+    padding-top: 0;
+  }
+  .choices.header_choices.is-open .choices__inner{
+    outline: none;
+    border-color: rgba(35, 196, 131, .4);
+    background-color: #fff;
+    box-shadow:  0 0 0 4px rgb(35 196 131 / 10%);
+  }
+
+
+   
+   
+   
+   
+  .length_input::-webkit-outer-spin-button,
+  .length_input::-webkit-inner-spin-button {
+      /* display: none; <- Crashes Chrome on hover */
+      -webkit-appearance: none;
+      margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  }
+  .choices__item::after{
+    display: none;
+  }
+
+  .callback__input{
+    background-color: red;
+  }
