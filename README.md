@@ -1,4 +1,4 @@
-# Friends service
+# Password service
 Service for password generating
 ## Endpoints
 - [Get started](#get-started)
