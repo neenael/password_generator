@@ -1,5 +1,8 @@
 # Password service
-Service for password generating
+### Service for password generating
+The purpose of the service is user safety. the service offers a system for generating strong passwords
+### Screenshot
+![Screenshot](https://github.com/neenael/password_generator/blob/main/screenshot.png)
 ## Endpoints
 - [Get started](#get-started)
   - [Docker](#docker)
